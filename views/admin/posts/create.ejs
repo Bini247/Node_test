@@ -11,19 +11,27 @@
 
     
     <div class="container">
-        <div class="col-md-12">
+        <div class="col-md-12 row">
             <h1>Novo Depoimento</h1>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form>
+                <form method="post" action="create">
                     <div class="form-group">
-                        <label for="testimonialTile">Título</label>
-                        <input type="text" class="form-control" id="testimonialTile" placeholder="Digite o Título">
+                        <label for="testimonialName">Nome</label>
+                        <input name="name" type="text" class="form-control" id="testimonialName" placeholder="Digite o Nome">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Depoimento</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <label for="testimonial">Depoimento</label>
+                        <textarea  name="testimonial" class="form-control" id="testimonial" placeholder="Digite o Depoimento"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input name="company" type="text" class="form-control" id="company" placeholder="Digite a Empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Título</label>
+                        <input name="title" type="text" class="form-control" id="title" placeholder="Digite o Título">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
