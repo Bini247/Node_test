@@ -9,12 +9,12 @@ router.get('/', function(req, res, next) {
         title: 'Depoimentos',
         testimonials: testimonials
     }
-    res.render('admin/posts/index', viewData);
+    res.render('admin/testimonials/index', viewData);
 });
 
 router.get('/create', function(req, res, next) {
     
-    res.render('admin/posts/create');
+    res.render('admin/testimonials/create');
 });
 
 router.post('/create', function(req, res, next) {
@@ -31,7 +31,7 @@ router.post('/create', function(req, res, next) {
 
     testimonialService.saveTestimonial(newPost);
 
-    res.redirect('/admin/posts');
+    res.redirect('/admin/testimonials');
 });
 
 module.exports = router;
