@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <%- include('../../imports'); -%>
+    <a href="/public/stylesheets/style.css" type="stylesheet"></a>
+</head>
+<body>
+    <%- include('../../navbar'); -%>
+
+    
+    <div class="container">
+        <div class="row">
+            <h1>Administração de depoimentos</h1>
+        </div>
+        <div class="row mb-2">
+            <a href="/admin/posts/create" class="btn btn-success">Novo Depoimento</a>
+        </div>
+        <div class="row">
+
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Depoimento</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% testimonials.forEach((item) => { %>
+                    <tr>
+                        <th scope="row"><%=item.id%></th>
+                        <td><%=item.name%></td>
+                        <td><%=item.company%></td>
+                        <td><%=item.testimony%></td>
+                    </tr>
+                <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+</body>
+</html>
