@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+    <%- include('imports'); -%>
+</head>
+<body>
+        <%- include('navbar'); -%>
+        <center>
+        <h3>Produtos</h3>
+        </center>
+    
+    <div class="container">
+        <div class="row">
+            <% products.forEach((product) => { %>
+                <%- include('product_card', { product: product }); -%>
+            <% }); %>
+        </div>
+    </div>
+
+</body>
+</html>
