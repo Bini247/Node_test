@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testimonialsRouter = require('./routes/testimonials');
 var adminTestimonialsRouter = require('./routes/admin/testimonials');
+var adminProductsRouter = require('./routes/admin/products');
 
 var app = express();
 
@@ -22,8 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/admin/testimonials', adminTestimonialsRouter);
 app.use('/users', usersRouter);
+app.use('/admin/products', adminProductsRouter);
+app.use('/admin/testimonials', adminTestimonialsRouter);
 app.use('/testimonials', testimonialsRouter);
 
 // catch 404 and forward to error handler
