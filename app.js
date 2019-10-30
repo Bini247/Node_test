@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var testimonialsRouter = require('./routes/testimonials');
 var adminTestimonialsRouter = require('./routes/admin/testimonials');
 var adminProductsRouter = require('./routes/admin/products');
+var productsRouter = require('./routes/products');
 var authRouter = require('./routes/auth');
 var verifyAuth = require('./middlewares/authMiddleware');
 
@@ -38,6 +39,7 @@ app.use('/auth', authRouter);
 app.use('/admin/testimonials', [verifyAuth], adminTestimonialsRouter);
 app.use('/users', usersRouter);
 app.use('/admin/products', /*[verifyAuth],*/ adminProductsRouter);
+app.use('/products', productsRouter);
 app.use('/testimonials', testimonialsRouter);
 
 // catch 404 and forward to error handler
