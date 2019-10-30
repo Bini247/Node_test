@@ -23,7 +23,7 @@ router.post('/login', function(req, res, next) {
     req.session.authenticatedUsers.push(user);
     res.cookie('loginToken', user.loginToken, { maxAge: 900000, httpOnly: true });
 
-    res.redirect('/admin/testimonials');
+    res.redirect('/');
   } 
   
 
