@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+    <%- include('imports'); -%>
+</head>
+<body>
+        <%- include('navbar'); -%>
+        <center>
+        <h3>Carrinho de Compras</h3>
+        </center>
+    
+    <div class="container">
+        <div class="row">
+            <%  var total = 0;
+                products.forEach((product) => { 
+                total += parseFloat(product.price);
+            %>
+                <%- include('shopping_card', { product: product }); -%>
+            <% });%>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <form action="/shopping-car/clear" method="post">
+                    <button class="btn btn-danger">Limpar Carrinho de compras</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <strong>Total:</strong> R$<%=total%>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,11 +1,16 @@
 <nav class="navbar navbar-dark bg-primary">
     <li class="nav-item">
         <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/products">Produtos</a>
         <a class="navbar-brand" href="/trabalheConosco">Trabalhe Conosco</a>
-        <a class="navbar-brand" href="/admin/testimonials">Depoimentos</a>
-        <a class="navbar-brand" href="/admin/products">Produtos</a>
         <% if (locals.loggedUser) { %>
+            <a class="navbar-brand" href="/admin/testimonials">Depoimentos</a>
+            <a class="navbar-brand" href="/admin/products">Produtos</a>
             <a class="navbar-brand" href="/auth/logout">Sair</a>
         <% } %> 
     </li>
 </nav>
+
+<div id="mybutton">
+    <a class="shopping-car" href="/shopping-car">Carrinho de compras</a>
+</div>
