@@ -26,7 +26,6 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Descrição</th>
                     <th scope="col">Preço</th>
-                    <th scope="col">Imagem</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,8 +34,7 @@
                         <th scope="row"><%=item.id%></th>
                         <td><%=item.name%></td>
                         <td><%=item.description%></td>
-                        <td><%=item.price%></td>
-                        <td><%=item.image%></td>
+                        <td>R$<%=item.price%></td>
                     </tr>
                 <% }); %>
                 </tbody>
